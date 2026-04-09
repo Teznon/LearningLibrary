@@ -1,0 +1,32 @@
+#######################################################################################################################
+
+                                                HUFFMAN CODE
+
+#######################################################################################################################
+
+One Sentence Overview:
+
+    Huffman Code is a lossless data compression algorithm that utilizes binary trees to organize a stream of symbols
+        by frequency, with more frequent symbols appearing higher in the tree and rarer symbols appearing lower. 
+
+Time Complexities: 
+
+    Building the Table:             O(n)            where "n" is the length of the input
+    Building the Huffman Tree:      O(k log(k))     where "k" is the number of unique symbols 
+    Encoding:                       O(n)
+    Decoding:                       O(n)
+
+#######################################################################################################################
+
+
+Notes: 
+    Developer: David A. Huffman
+    Published: 
+    Limitations of Huffman Codes:
+        - Must assign whole number bits to each symbol
+            
+            ex: if a symbol has a probability of 0.9, the the ideal code length is log(0.9) ~ 0.15 bits, but Huffman
+                forces a minimum of 1 bit.
+
+    Alternatives to Huffman:
+        - Arithmatic Coding: 
