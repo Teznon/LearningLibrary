@@ -1,0 +1,22 @@
+#######################################################################################################################
+
+                                                KRAGER ALGORITHM
+
+#######################################################################################################################
+
+Purpose: Given an unweighted and undirected graph, find the minimum cut (smallest number of edges that can be removed to disconnect the graph).
+
+Algorithm: 
+    1. Initialize the a copy of the graph (CG)
+    2. While there are more than 2 verticies:
+        2.a Randomly select an edge (u, v) on CG
+        2.b Merge (contract) u and v into a single vertex
+            2.b.i update CG
+        2.c remove all self loops
+    3. return the cut represented by the two verticies
+
+
+Krager's Algorithm is a Monte Carlo algorithm and the cut produced may not be the minimum. 
+
+Intended use: Due to the fact it may return the wrong cut, the algorithms strength is it's speed. This algroithm can be run many times, which increases the 
+    probability of being correct. 
